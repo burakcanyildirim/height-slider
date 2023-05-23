@@ -126,9 +126,9 @@ class _HeightSliderState extends State<HeightSlider> {
           height: widget.height,
           unit: widget.unit,
           primaryColor: widget.primaryColor ?? Theme.of(context).primaryColor,
-          accentColor: widget.accentColor ?? Theme.of(context).accentColor,
+          accentColor: widget.accentColor ?? Theme.of(context).colorScheme.secondary,
           currentHeightTextColor:
-              widget.currentHeightTextColor ?? Theme.of(context).accentColor,
+              widget.currentHeightTextColor ?? Theme.of(context).colorScheme.secondary,
           sliderCircleColor:
               widget.sliderCircleColor ?? Theme.of(context).primaryColor),
       left: 0.0,
@@ -145,7 +145,7 @@ class _HeightSliderState extends State<HeightSlider> {
         return Text(
           "${widget.maxHeight - 5 * idx}",
           style: TextStyle(
-            color: widget.numberLineColor ?? Theme.of(context).accentColor,
+            color: widget.numberLineColor ?? Theme.of(context).colorScheme.secondary,
             fontSize: labelFontSize,
           ),
         );
